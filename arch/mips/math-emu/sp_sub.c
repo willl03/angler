@@ -150,8 +150,8 @@ ieee754sp ieee754sp_sub(ieee754sp x, ieee754sp y)
 		/* generate 28 bit result of adding two 27 bit numbers
 		 */
 		xm = xm + ym;
-		xe = xe;
-		xs = xs;
+		/* xe does not change */
+		/* xs does not change */
 
 		if (xm >> (SP_MBITS + 1 + 3)) { /* carry out */
 			SPXSRSX1();	/* shift preserving sticky */
@@ -159,11 +159,11 @@ ieee754sp ieee754sp_sub(ieee754sp x, ieee754sp y)
 	} else {
 		if (xm >= ym) {
 			xm = xm - ym;
-			xe = xe;
-			xs = xs;
+			/* xe does not change */
+			/* xs does not change */
 		} else {
 			xm = ym - xm;
-			xe = xe;
+			/* xe does not change */
 			xs = ys;
 		}
 		if (xm == 0) {

@@ -155,8 +155,8 @@ ieee754dp ieee754dp_sub(ieee754dp x, ieee754dp y)
 		/* generate 28 bit result of adding two 27 bit numbers
 		 */
 		xm = xm + ym;
-		xe = xe;
-		xs = xs;
+		/* xe does not change */
+		/* xs does not change */
 
 		if (xm >> (DP_MBITS + 1 + 3)) { /* carry out */
 			xm = XDPSRS1(xm);	/* shift preserving sticky */
@@ -165,11 +165,11 @@ ieee754dp ieee754dp_sub(ieee754dp x, ieee754dp y)
 	} else {
 		if (xm >= ym) {
 			xm = xm - ym;
-			xe = xe;
-			xs = xs;
+			/* xe does not change */
+			/* xs does not change */
 		} else {
 			xm = ym - xm;
-			xe = xe;
+			/* xe does not change */
 			xs = ys;
 		}
 		if (xm == 0) {
