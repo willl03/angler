@@ -122,6 +122,13 @@ case "$echoice" in
 		echo "Using Linaro 6.0"
 		break
 		;;
+	7 )
+		export CROSS_COMPILE=${HOME}/android/aarch64-linux-android-4.9/bin/aarch64-linux-android-
+		TC="AOSP4.9"
+		echo
+		echo "Using AOSP 4.9"
+		break
+		;;
 	* )
 		echo
 		echo "Invalid try again!"
