@@ -129,6 +129,13 @@ case "$echoice" in
 		echo "Using AOSP 4.9"
 		break
 		;;
+	8 )
+		export CROSS_COMPILE=${HOME}/android/uberbuild/out/aarch64-linux-android-7.0-kernel/bin/aarch64-linux-android-
+		TC="UBER7.0"
+		echo
+		echo "Using UBER 7.0"
+		break
+		;;
 	* )
 		echo
 		echo "Invalid try again!"
