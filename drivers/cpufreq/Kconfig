@@ -130,6 +130,11 @@ config CPU_FREQ_DEFAULT_GOV_DESPAIR
 	select CPU_FREQ_GOV_DESPAIR
 	help
 
+config CPU_FREQ_DEFAULT_GOV_IMPULSE
+	bool "impulse"
+	select CPU_FREQ_GOV_IMPULSE
+	help
+
 endchoice
 
 config CPU_FREQ_GOV_PERFORMANCE
@@ -244,7 +249,11 @@ config CPU_FREQ_GOV_CONSERVATIVE
 config CPU_FREQ_GOV_DESPAIR
 	tristate "'despair' cpufreq governor"
 	depends on CPU_FREQ
-	
+
+config CPU_FREQ_GOV_IMPULSE
+	tristate "'impulse' cpufreq governor"
+	depends on CPU_FREQ
+
 config CPU_BOOST
 	tristate "Event base short term CPU freq boost"
 	depends on CPU_FREQ
