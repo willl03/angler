@@ -15,7 +15,7 @@ DTBIMAGE="dtb"
 DEFCONFIG="kylo_defconfig"
 
 # Kernel Details
-VER=".R26.M.angler."
+VER=".R30.M.angler."
 
 # Paths
 KERNEL_DIR=`pwd`
@@ -88,17 +88,17 @@ case "$echoice" in
 		break
 		;;
 	2 )
-		export CROSS_COMPILE=${HOME}/android/uberbuild/out/aarch64-linux-android-5.3-kernel/bin/aarch64-linux-android-
-		TC="UBER5.3"
+		export CROSS_COMPILE=${HOME}/android/uberbuild/out/aarch64-linux-android-5.x-kernel/bin/aarch64-linux-android-
+		TC="UBER5.x"
 		echo
-		echo "Using UBERTC 5.3"
+		echo "Using UBERTC 5.x"
 		break
 		;;
 	3 )
-		export CROSS_COMPILE=${HOME}/android/uberbuild/out/aarch64-linux-android-6.0-kernel/bin/aarch64-linux-android-
-		TC="UBER6.0"
+		export CROSS_COMPILE=${HOME}/android/uberbuild/out/aarch64-linux-android-6.x-kernel/bin/aarch64-linux-android-
+		TC="UBER6.x"
 		echo
-		echo "Using UBERTC 6.0"
+		echo "Using UBERTC 6.x"
 		break
 		;;
 	4 )
@@ -109,17 +109,17 @@ case "$echoice" in
 		break
 		;;
 	5 )
-		export CROSS_COMPILE=${HOME}/android/linarobuild/out/aarch64-linux-android-5.3-kernel/bin/aarch64-linux-android-
-		TC="LINARO5.3"
+		export CROSS_COMPILE=${HOME}/android/linarobuild/out/aarch64-linux-android-5.x-kernel/bin/aarch64-linux-android-
+		TC="LINARO5.x"
 		echo
-		echo "Using Linaro 5.3"
+		echo "Using Linaro 5.x"
 		break
 		;;
 	6 )
-		export CROSS_COMPILE=${HOME}/android/linarobuild/out/aarch64-linux-android-6.0-kernel/bin/aarch64-linux-android-
-		TC="LINARO6.0"
+		export CROSS_COMPILE=${HOME}/android/linarobuild/out/aarch64-linux-android-6.x-kernel/bin/aarch64-linux-android-
+		TC="LINARO6.x"
 		echo
-		echo "Using Linaro 6.0"
+		echo "Using Linaro 6.x"
 		break
 		;;
 	7 )
