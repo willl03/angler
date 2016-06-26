@@ -1963,7 +1963,7 @@ static int mdss_panel_parse_dt(struct device_node *np,
 		pr_err("Error parsing HBM\n");
 		goto error;
 	}
-yu
+
 	return 0;
 
 error:
