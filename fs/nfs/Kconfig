@@ -116,8 +116,8 @@ config PNFS_BLOCK
 
 config PNFS_OBJLAYOUT
 	tristate
-	depends on NFS_V4_1 && SCSI_OSD_ULD
-	default m
+	depends on NFS_V4_1 && SCSI_OSD_ULD && BROKEN
+	default NFS_V4
 
 config NFS_V4_1_IMPLEMENTATION_ID_DOMAIN
 	string "NFSv4.1 Implementation ID Domain"
