@@ -1572,6 +1572,8 @@ void __init kmem_cache_init(void)
 			create_kmalloc_cache("kmalloc-node",
 				kmalloc_size(INDEX_NODE), ARCH_KMALLOC_FLAGS);
 
+	correct_kmalloc_cache_index_table();
+
 	slab_early_init = 0;
 
 	/* 4) Replace the bootstrap head arrays */
